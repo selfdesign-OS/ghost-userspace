@@ -121,6 +121,7 @@ void O1Scheduler::TaskNew(O1Task* task, const Message& msg) {
   } else {
     // Wait until task becomes runnable to avoid race between migration
     // and MSG_TASK_WAKEUP showing up on the default channel.
+    GHOST_DPRINT(1, stderr, "BlockedTask[%llu] - %s", task->gtid.id(), task->run_state);
   }
 }
 

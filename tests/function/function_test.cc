@@ -19,6 +19,7 @@ namespace ghost {
         };
 
         void New_01(int num_tasks) {
+            printf("%d task create\n", num_tasks);
             std::vector<std::unique_ptr<GhostThread>> tasks;
 
             tasks.reserve(num_tasks);
@@ -38,8 +39,8 @@ namespace ghost {
 int main() {
     {
         printf("new-01\n");
-        ghost::ScopredTime time;
-        ghost::New_01(15);
+        ghost::ScopedTime time;
+        ghost::New_01(100000);
     }
     
     return 0;
