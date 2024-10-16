@@ -254,6 +254,18 @@ cc_binary(
 )
 
 cc_binary(
+    name = "function_test",
+    srcs = [
+        "tests/function/function_test.cc",
+    ],
+    copts = compiler_flags,
+    deps = [
+        ":base",
+        ":ghost",
+    ],
+)
+
+cc_binary(
     name = "simple_exp",
     srcs = [
         "tests/simple_exp.cc",
