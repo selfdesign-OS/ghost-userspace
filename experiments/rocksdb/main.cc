@@ -83,7 +83,7 @@ ABSL_FLAG(absl::Duration, discard_duration, absl::Seconds(2),
           "All results from when the experiment starts to when the discard "
           "duration has elapsed are discarded. We do not want the results to "
           "include initialization costs, such as page faults. (default: 2s).");
-ABSL_FLAG(std::string, scheduler, "ghOSt",
+ABSL_FLAG(std::string, scheduler, "cfs",
           "The scheduler to use (\"cfs\" for Linux Completely Fair Scheduler "
           "or \"ghost\" for ghOSt, default: \"cfs\")");
 ABSL_FLAG(
